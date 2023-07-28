@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import WorkoutDetails from '../components/WorkoutDetails';
+import WorkoutForm from '../components/WorkoutForm';
+import { BASE_URL } from '../constants';
 const Home = () => {
     const[workouts, setWorkouts] = useState([]);
 
     useEffect(() => {
         const fetchWorkouts = async () => {
-            const response = await fetch(('/api/workouts'));
+            const response = await fetch(`${BASE_URL}/api/workouts`);
             const json = await response.json();
             if(!response.ok) {
                 throw new Error(`${json.message} (${response.status})`);
@@ -27,6 +29,7 @@ const Home = () => {
                     )
                 }
             </div>
+            <WorkoutForm/>
         </div>
     )
 }
