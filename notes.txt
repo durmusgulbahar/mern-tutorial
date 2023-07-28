@@ -1,0 +1,5 @@
+there are two ways to fix the CORS Error
+1- Add proxy to package.json file in the frontend "proxy": "http://localhost:4000",
+    it sends to request to server from server address, it just work only in development
+
+2- use npm cors

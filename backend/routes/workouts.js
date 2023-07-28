@@ -5,7 +5,7 @@ const router = express.Router();
 // GET all workouts
 router.get('/',getAllWorkout);
 
-// GET a workout by id
+// GET a workout by id 
 router.get('/:id',getAWorkout);
 
 // POST a new workout
