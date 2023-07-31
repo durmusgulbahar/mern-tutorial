@@ -3,3 +3,5 @@ there are two ways to fix the CORS Error
     it sends to request to server from server address, it just work only in development
 
 2- use npm cors
+
+3- if auth is required in our app, we need to modify all fetch funcs in frontend
